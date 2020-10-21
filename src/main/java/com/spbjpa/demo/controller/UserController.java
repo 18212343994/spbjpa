@@ -14,7 +14,7 @@ public class UserController {
     private UserRepository userRepository;
 
     @RequestMapping("/id")
-    public List<User> getUsers(String id){
+    public String getUsers(String id){
         System.out.println("id is:"+id);
         return userRepository.getAll(id);
 
@@ -23,6 +23,6 @@ public class UserController {
     @RequestMapping("/id1")
     public String addUser1(String id) {
         System.out.println("id is:"+id);
-        return "123";
+        return userRepository.getAll1(id);
     }
 }

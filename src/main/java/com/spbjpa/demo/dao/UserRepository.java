@@ -9,7 +9,12 @@ import java.util.List;
 import java.util.Map;
 
 public interface UserRepository extends JpaRepository<User,Integer>{
-    @Query(value = "SELECT * FROM android_cet4 WHERE id=:id",nativeQuery = true)
-    List<User> getAll(@Param("id")String id);
+    @Query(value = "select android_cet4.english from android_cet4 WHERE id=:id",nativeQuery = true)
+    String getAll(@Param("id")String id);
+
+
+    @Query(value = "select android_cet4.english,android_cet4.chinese from android_cet4 WHERE id=:id",nativeQuery = true)
+    String getAll1(@Param("id")String id);
+
 
 }

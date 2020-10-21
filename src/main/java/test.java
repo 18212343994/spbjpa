@@ -14,7 +14,7 @@ import java.util.regex.Pattern;
 public class test{
     public static void main(String path[]) throws Exception {
         String ab="test";
-        URL u = new URL("http://localhost:8088/id?id=2");
+        URL u = new URL("http://ef5c3b.natappfree.cc/id?id=343");
         InputStream in = u.openStream();
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         try {
